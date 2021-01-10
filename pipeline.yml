@@ -15,8 +15,8 @@ jobs:
           image_resource:
             type: docker-image
             source:
-              repository: google/cloud-sdk
-             tag: latest
+              repository: maurya593/web1
+              tag: latest
           params:
             gcp_project: qp-cna-demo-2020-12
           inputs:
