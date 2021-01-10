@@ -1,0 +1,25 @@
+resources:
+- name: repo-dev
+  type: git
+  source:
+    uri: https://github.com/mauryashivam593/concourse_gke.git
+jobs:
+- name: docker-build
+  plan:
+  - get: repo-dev
+    trigger: true
+  - aggregate:
+      - task: docker-build-wb
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source:
+              repository: google/cloud-sdk
+             tag: latest
+          params:
+            gcp_project: qp-cna-demo-2020-12
+          inputs:
+          - name: repo-dev
+          run:
+            path: concourse_gke/docker-build.sh
