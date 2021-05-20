@@ -1,0 +1,39 @@
+import promote
+#import requests
+from urllib.request import urlopen
+from urllib.error import HTTPError 
+#from schema import Schema, And
+
+# schema is optional https://pypi.python.org/pypi/schema
+#@promote.validate_json(Schema({'name': And(str, lambda s: len(s) > 1)}))
+
+try:
+    html = urlopen("https://dev-alteryxpromote.gcp.cna.com",cafile="InternalCaCerts.pem")
+except urllib.error.HTTPError as e:
+    print(e.code)
+    if html is None:
+        print("URL not found or certificate error ")
+
+
+#urllib.request.urlopen("https://dev-alteryxpromote.gcp.cna.com",cafile="InternalCaCerts.pem")
+#requests.get("https://dev-alteryxpromote.gcp.cna.com",verify="InternalCaCerts.pem")
+
+
+def helloWorld(data):
+    return {'response': 'Hello ' + data['name'] + '!'}
+
+USERNAME = 'cutaglpm'
+API_KEY = 'f69daf18-9900-4f35-8229-7211b179e356'
+PROMOTE_URL = "https://dev-alteryxpromote.gcp.cna.com/"
+
+p = promote.Promote(USERNAME, API_KEY, PROMOTE_URL)
+
+# test data
+TESTDATA = {'name': 'Orchestrator'}
+
+# test model locally
+print(helloWorld(TESTDATA))
+
+# 1. test that TESTDATA is valid json
+# 2. THERE IS test data, run helloWorld(TESTDATA) before deployment
+p.deploy("testPythonModel", helloWorld, TESTDATA, confirm=False, dry_run=False, verbose=4)
