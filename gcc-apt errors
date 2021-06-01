@@ -1,0 +1,34 @@
+2021-05-26T20:50:59.251Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModelOrchestrator-155: W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://cran.r-project.org/bin/linux/ubuntu trusty/ Release: The following signatures were invalid: KEYEXPIRED 1602869253  KEYEXPIRED 1602869253  KEYEXPIRED 1602869253
+W: Failed to fetch http://cran.r-project.org/bin/linux/ubuntu/trusty/Release.gpg  The following signatures were invalid: KEYEXPIRED 1602869253  KEYEXPIRED 1602869253  KEYEXPIRED 1602869253
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+
+GCC ERROR 
+
+2021-05-31T20:23:48.835Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: software-properties-common is already the newest version (0.96.20.8).
+0 upgraded, 0 newly installed, 0 to remove and 20 not upgraded.
+
+2021-05-31T20:23:49.843Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23:  Toolchain test builds; see https://wiki.ubuntu.com/ToolChain
+
+ More info: https://launchpad.net/~ubuntu-toolchain-r/+archive/ubuntu/test
+
+2021-05-31T20:23:50.259Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: gpg: keyring `/tmp/tmpr9b7drk2/secring.gpg' created
+
+2021-05-31T20:23:50.260Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: gpg: keyring `/tmp/tmpr9b7drk2/pubring.gpg' created
+
+2021-05-31T20:23:50.260Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: gpg: requesting key BA9EF27F from hkp server keyserver.ubuntu.com
+
+2021-05-31T20:23:50.679Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: gpg: /tmp/tmpr9b7drk2/trustdb.gpg: trustdb created
+
+2021-05-31T20:23:50.680Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: gpg: key BA9EF27F: public key "Launchpad Toolchain builds" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+
+2021-05-31T20:23:51.374Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: OK
+
+2021-05-31T20:23:51.456Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: gcc (Ubuntu 5.4.0-6ubuntu1~16.04.11) 5.4.0 20160609
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+2021-05-31T20:23:51.457Z 10.255.0.4: BUILD-LOG cutaglpm-aglClaimModel-23: /src/promote.sh: line 16: gcc-7: command not found
