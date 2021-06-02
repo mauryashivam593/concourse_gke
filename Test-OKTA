@@ -1,0 +1,16 @@
+import requests
+pipeline_task= "Deploy"
+
+if pipeline_task != 'TEST':
+    okta_fnol_url = "https://cnapreview.okta.com/oauth2/aus1ac00mhbxpEFNs297/v1/introspect?token="
+    okta_fnol_user = ''
+    okta_fnol_pw = ''
+    
+    access_token = input_date['AccessToken']
+    
+    url = okta_fnol_url + access_token
+    headers = {"Content-Type" : "application/x-www-form-urlencoded","Accept" : "application/json"}
+    response = requests.post(url,json = body,auth = (username,password),headers = headers)
+    
+    if response.status() in ('200','201','202','203'):
+        print(help(response))
